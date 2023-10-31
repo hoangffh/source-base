@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  app:
+    container_name: app
+    build:
+      context: ./
+      dockerfile: dev.Dockerfile
+    environment:
+      JWT_SECRET: ${JWT_SECRET}
+      DB_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+    restart: always
+    ports:
+      - "2000:3000"

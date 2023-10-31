@@ -1,0 +1,30 @@
+{
+  "greeting": "Hello world",
+  "header":{
+    "help": "ヘルプ"
+  },
+  "common":{
+    "cancel": "キャンセル"
+  },
+  "v01": {
+    "residence_application_form": "様の在留申請書",
+    "name": "名前",
+    "gender": "性別",
+    "nationality_region": "国籍・地域",
+    "date_of_birth": "生年月日",
+    "expiry_date_of_stay": "在留満了日",
+    "residence_card_number": "在留カード番号",
+    "current_address": "現住所",
+    "application_details": "申請内容",
+    "status_of_residence": "申請する在留資格",
+    "submission": "提出"
+  },
+  "v03": {
+    "label_submitting":"さんの申請書（しんせいしょ）を送信中（そうしんちゅう）...",
+    "submit_resolved":{
+      "label1": "申請（しんせい）できました。",
+      "label2": "受付番号（うけつけばんごう）は",
+      "label3": "です。"
+    }
+  }
+}

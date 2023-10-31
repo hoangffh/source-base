@@ -1,0 +1,11 @@
+image: docker
+services:
+  - docker:dind
+stages:
+  - deploy
+step-deploy-test:
+  stage: deploy
+  only:
+    - test
+  script:
+    - yarn run:dev

@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log
+
+Dockerfile
+dev.docker-compose.yml
+dev.Dockerfile
+.dockerignore
+
+.env
+.env.template
+
+cheese.log
+yarn.lock
+
+build
+.next
