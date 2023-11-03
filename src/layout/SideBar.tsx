@@ -1,14 +1,10 @@
-'use client';
+'use client'
 import { URL } from '@src/utils/constants/index'
-import {
-  GlobalOutlined,
-  HomeOutlined,
-} from '@ant-design/icons'
+import { GlobalOutlined, HomeOutlined } from '@ant-design/icons'
 import type { MenuProps } from 'antd'
 import { Menu } from 'antd'
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 import React, { useState } from 'react'
-
 
 type MenuItem = Required<MenuProps>['items'][number]
 
@@ -17,7 +13,7 @@ function getItem(
   key: React.Key,
   icon?: React.ReactNode,
   children?: MenuItem[],
-  type?: 'group',
+  type?: 'group'
 ): MenuItem {
   return {
     key,
@@ -31,10 +27,8 @@ function getItem(
 // submenu keys of first level
 const rootSubmenuKeys = ['sub1', 'sub2', 'sub4']
 
-
-
-const SideBar  = ({theme}:{theme:any}) => {
-    const router = useRouter()
+const SideBar = ({ theme }: { theme: any }) => {
+  const router = useRouter()
   const [openKeys, setOpenKeys] = useState(['sub1'])
 
   const onOpenChange: MenuProps['onOpenChange'] = (keys) => {
@@ -46,29 +40,23 @@ const SideBar  = ({theme}:{theme:any}) => {
     }
   }
 
-  const items: MenuItem[] =
-    [
-      getItem('Dashboard', URL.HOME, <HomeOutlined />),
-      getItem(
-        'Quản lý Nguồn khách hàng',
-        URL.GAME,
-        <GlobalOutlined />
-      ),
-      // getItem('Quản lý khách hàng', URL.HOME, <TeamOutlined />),
-      // getItem('Quản lý gửi', 'sub3', <MailOutlined />, [
-      //   getItem('Quản lý gửi mail', URL.HOME),
-      //   getItem('Quản lý gửi inquiry', URL.HOME),
-      // ]),
+  const items: MenuItem[] = [
+    getItem('Dashboard', URL.HOME, <HomeOutlined />),
+    getItem('Quản lý Nguồn khách hàng', URL.GAME, <GlobalOutlined />),
+    // getItem('Quản lý khách hàng', URL.HOME, <TeamOutlined />),
+    // getItem('Quản lý gửi', 'sub3', <MailOutlined />, [
+    //   getItem('Quản lý gửi mail', URL.HOME),
+    //   getItem('Quản lý gửi inquiry', URL.HOME),
+    // ]),
 
-      // getItem(
-      //   'Quản lý template',
-      //   URL.HOME,
-      //   <FileTextOutlined />
-      // ),
-      // getItem('Quản lý tài liệu', URL.HOME, <FileTextOutlined />),
-      // getItem('Thông tin liên hệ', URL.HOME, <InfoCircleOutlined />)
-    ]
-  
+    // getItem(
+    //   'Quản lý template',
+    //   URL.HOME,
+    //   <FileTextOutlined />
+    // ),
+    // getItem('Quản lý tài liệu', URL.HOME, <FileTextOutlined />),
+    // getItem('Thông tin liên hệ', URL.HOME, <InfoCircleOutlined />)
+  ]
 
   const handleClick = (keys: any) => {
     router.push(keys.key)

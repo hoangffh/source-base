@@ -1,27 +1,24 @@
-
-import {  Table } from 'antd'
+import { Table } from 'antd'
 import { memo } from 'react'
 interface DataType {
   id: string
 }
 
-
-
 interface IProps {
   dataSource: DataType[]
   rowSelection: any
-  loading: boolean,
-  rowKey:string,
+  loading: boolean
+  rowKey: string
   //Array
-  columns:any,
-  scroll?:Object,
-  bordered?:boolean,
-  pagination?:boolean,
-  size?:any,
-  showHeader?:boolean,
+  columns: any
+  scroll?: Object
+  bordered?: boolean
+  pagination?: boolean
+  size?: any
+  showHeader?: boolean
   //[ascend, descend]
-  sortDirections?:any,
-  virtual?:boolean
+  sortDirections?: any
+  virtual?: boolean
 }
 
 const BaseTable = ({
@@ -36,12 +33,8 @@ const BaseTable = ({
   size = 'middle',
   showHeader,
   sortDirections,
-  virtual = false
-
+  virtual = false,
 }: IProps) => {
-  
-
-  
   return (
     <div>
       <Table
@@ -50,13 +43,13 @@ const BaseTable = ({
         dataSource={dataSource}
         scroll={scroll}
         pagination={pagination as any}
-        bordered ={bordered}
+        bordered={bordered}
         rowKey={rowKey}
         loading={loading}
-        size ={size}
-        showHeader ={showHeader}
+        size={size}
+        showHeader={showHeader}
         sortDirections={sortDirections}
-        virtual ={virtual}
+        virtual={virtual}
       />
     </div>
   )

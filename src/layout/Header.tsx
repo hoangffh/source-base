@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <header className="bg-blue-primary h-16 flex justify-between items-center px-4 sm:px-[30px]">
       <div>
-        <div>{!collapsed ? 'Logo' : 'Logo'}</div>
+        <div className="text-white">{!collapsed ? 'Logo' : 'Logo'}</div>
       </div>
 
       <div className="flex justify-between items-center gap-6">

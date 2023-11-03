@@ -1,4 +1,3 @@
-
 import { NextPageWithLayout } from '@src/interfaces'
 import Layout from '@src/layout'
 import { ReactElement } from 'react'
@@ -21,6 +20,5 @@ const Index: NextPageWithLayout = () => {
 Index.getLayout = (page: ReactElement) => {
   return <Layout>{page}</Layout>
 }
-
 
 export default Index

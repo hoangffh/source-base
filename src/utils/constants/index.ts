@@ -1,6 +1,5 @@
 const URL = {
-    HOME:'',
-    GAME:'/game'
-
+  HOME: '',
+  GAME: '/game',
 }
-export {URL}
+export { URL }
